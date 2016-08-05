@@ -1,41 +1,11 @@
-@font-face {
-	font-family: 'ProximaNova';
-	src: url('fonts/ProximaNova-Regular.eot');
-	src: local('☺'), url('fonts/ProximaNova-Regular.woff') format('woff'), url('fonts/ProximaNova-Regular.ttf') format('truetype'), url('fonts/ProximaNova-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Times';
-	src: url('fonts/Times-Roman.eot');
-	src: local('☺'), url('fonts/Times-Roman.woff') format('woff'), url('fonts/Times-Roman.ttf') format('truetype'), url('fonts/Times-Roman.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Times';
-	src: url('fonts/Times-Italic.eot');
-	src: local('☺'), url('fonts/Times-Italic.woff') format('woff'), url('fonts/Times-Italic.ttf') format('truetype'), url('fonts/Times-Italic.svg') format('svg');
-	font-weight: normal;
-	font-style: italic;
-}
-@font-face {
-	font-family: 'Times';
-	src: url('fonts/Times-Bold.eot');
-	src: local('☺'), url('fonts/Times-Bold.woff') format('woff'), url('fonts/Times-Bold.ttf') format('truetype'), url('fonts/Times-Bold.svg') format('svg');
-	font-weight: bold;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Times';
-	src: url('fonts/Times-BoldItalic.eot');
-	src: local('☺'), url('fonts/Times-BoldItalic.woff') format('woff'), url('fonts/Times-BoldItalic.ttf') format('truetype'), url('fonts/Times-BoldItalic.svg') format('svg');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@import "mixin/gradient";
+@import "mixin/mixins";
 @import "variables/variables";
+
+@include font-face(ProximaNova,fonts/ProximaNova-Regular,normal,normal);
+@include font-face(Times,fonts/Times-Roman,normal,normal);
+@include font-face(Times,fonts/Times-Italic,normal,italic);
+@include font-face(Times,fonts/Times-Bold,bold,normal);
+@include font-face(Times,fonts/Times-BoldItalic,bold,italic);
 
 body{
 	font-family: $body-font;
@@ -45,22 +15,20 @@ body{
 	line-height: 1.5;
 	letter-spacing: 1px;
 }
+@include linx ($primary-color, $primary-color, $primary-color, $primary-color);
 ul{
 	margin: 0;
 	padding: 0;
 }
-a{
-	color: $primary-color;
-}
-a:hover,a:active,a:visited{
-	color: $primary-color;
-	text-decoration: none;
-}
-h3, .h3 {
-    font-size: 20px;
+
+h3{
+	font-size: 20px;
     font-style: $font-styleNormal;
     letter-spacing: 15px;
 }
+.h3 {
+    @extend h3;
+ }
 h4{
 	font-family: $body-font;
 	font-size: 16px;
@@ -70,7 +38,7 @@ h4{
 	letter-spacing: 4px;
 	
 }
-.btn-default,.link-button{
+.btn-default{
 	background-color: transparent;
 	font-family: $proxima;
 	font-style: $font-styleNormal;
@@ -81,13 +49,15 @@ h4{
     text-transform: uppercase;
     width: 210px;
 	padding: 8px 12px;
-&:hover{
-	background-color: transparent;	
-	border: 1px solid;
-	color: $primary-color;
-}	
+	
+	&:hover{
+		background-color: transparent;	
+		border: 1px solid;
+		color: $primary-color;
+	}	
 }
 .link-button{
+	@extend .btn-default;
 	margin: 0 auto;
 	text-decoration: none;
 	text-align: center;
@@ -102,12 +72,15 @@ h4{
 	box-shadow: none;
 	border-radius: 0;
 }
-.form-control::-moz-placeholder{
+.form-control{
+	&::-moz-placeholder{
 	color: $primary-color;
+	}
+	&:focus{
+		box-shadow: none;
+	}
 }
-.form-control:focus{
-	box-shadow: none;
-}
+
 .container{
 	max-width: 1020px;
 	margin: 0 auto;
@@ -122,9 +95,11 @@ h4{
 	align-items: center;
 	justify-content: center;
 }
-.row.no-gutter {
-  margin-left: 0;
-  margin-right: 0;
+.row{
+	&.no-gutter {
+	  margin-left: 0;
+	  margin-right: 0;
+	}
 }
 .navbar{
 	line-height: 40px;
@@ -243,7 +218,7 @@ h4{
 		max-width: 100%;
 	}
 	.latest-text {
-		min-height: 335px;
+		min-height: 343px;
 		text-align: center;
 		align-items: center;
 		display: flex;
@@ -259,30 +234,28 @@ h4{
 			font-style: $font-styleItalic;
 		}
 	}
+  .image{
+	  img{
+		width: 100%;
+	  }
+  }		
  }		
 }
-.home-blog{
+.latest-blog{
 	padding-top: 60px;
 	text-align: center;
 	.blog-first-col{
-		min-height: 440px;
+		min-height: 430px;
 		background-color: $third-bgcolor;
 	h4{
 		margin: 0;
 		padding: 25px 0;
 	}
 	}
-	.no-gutter{
-	.col-md-7 {
-		img{
-		width: 100%;
-	}
-	}
- }
-img{
-  width: 100%;
-  min-height: 440px;
-} 
+	.blog-img{
+		background-size: cover !important;
+		min-height: 430px;
+	} 
 }
 // Pages
 .page{
@@ -316,7 +289,7 @@ img{
    .about {
 		.page-content{
 			text-align: center;
-			padding: 35px 0 0 80px;
+			padding: 35px 0 0 65px;
 		p{
 			margin-bottom: 25px;
 			}
@@ -354,7 +327,7 @@ img{
   .contact-grid{
 	@include bg-gradient(#ffffff,#fafafa);
 	  .page-content{
-		padding: 60px 0 0 80px;
+		padding: 60px 0 0 65px;
 		p{
 			margin-bottom: 45px;
 		}
@@ -452,9 +425,9 @@ img{
 		text-align: center;
 		line-height: 40px;
 		letter-spacing: 1px;
-	p{
-		margin-bottom: 0;
-	}
+		p{
+			margin-bottom: 0;
+		}
 	}
 }
 
