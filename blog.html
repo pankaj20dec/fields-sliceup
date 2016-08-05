@@ -6,6 +6,10 @@
 	<link rel="stylesheet" href="bootstrap-sass/assets/stylesheets/bootstrap.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="style.css" />
+	<style type="text/css">
+		
+		
+	</style>
 </head>
 <body>
 	<header id="header">
@@ -32,8 +36,8 @@
 							</ul>
 						</nav>
 						<div class="cart">
-							<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-							<span>0 items</span>
+							<a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+							<span>0 items</span></a>
 						</div>
 					</div>	
 				</div>
@@ -49,47 +53,30 @@
 			</div>
 		</div>
 	</header>
-	<div class="main-container">
-		<div class="banner" style="background:url(images/home-banner.jpg) no-repeat;">
-			<div class="banner-overlay">
-				<h3>FOLLOW YOUR FEET</h3>
-				<div class="sub-heading">WINTER'16 COLLECTION</div>
-				<img src="images/rectangle-button.png" />
+	<div class="main-container page blog-page">
+		<div class="page-container">
+			<div class="banner" style="background:url(images/blog-banner.jpg) no-repeat;">
 			</div>
-		</div>
-		<div class="featured-products container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="image">
-						<img src="images/photo1.jpg" alt="Kali" />
-						<div class="product-details text-center">
-							<h4><span class="product-name">Kali</span> / <span class="product-category">lace</span></h4>
-							<div class="price">$350.00</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="latest-text">
-						<div class="latest-inner">
-							<h4> SHOP THE LATEST</h4>
-							<img src="images/shop-button.png" />	
-							<p>we’ve been busy collecting and creating <br> our latest range.</p>
-						</div>
-					</div>
-					<div class="image">
-						<img src="images/photo2.jpg" alt="Kali" />
-					</div>
-					<div class="product-details text-center">
-						<h4><span class="product-name">marlee</span> / <span class="product-category">stone</span></h4>
-						<div class="price">$150.00</div>
-				</div>
+			<div class="blog container">
+				<h4 class="page-title">LATEST</h4>
+				<img class="rectangle-image" src="images/shop-button.png" alt="Rectangle Button" />
+				<div class="grid">
+				 <div class="grid-sizer"></div>
+				  <div class="grid-item--width2 grid-item--width6"><img src="images/post-img1.jpg" alt="Post" /></div>
+				  <div class="grid-item--width2 grid-item--width6"><img src="images/post-img2.jpg" alt="Post" /></div>
+				  <div class="grid-item--width2 grid-item--width6"><img src="images/post-img4.jpg" alt="Post" /></div>
+				  <div class="grid-item--width2 grid-item--width6"><img src="images/post-img3.jpg" alt="Post" /></div>
+					   
+					 <div class="grid-item--width2 grid-item--width8"><img src="images/post-img6.jpg" alt="Post" /></div>
+					   <div class="grid-item--width2 grid-item--width4"><img src="images/post-img5.jpg" alt="Post" /></div>
+					   <div class="grid-item--width2 grid-item--width4"><img src="images/post-img7.jpg" alt="Post" /></div>
+					   <div class="grid-item--width2 grid-item--width4"><img src="images/post-img8.jpg" alt="Post" /></div>
 				</div>
 			</div>
-			<a href="#" class="link-button">View Range</a>
 		</div>
 		<section class="latest-blog fluid-container">
 			<div class="row no-gutter">
-				<div class="col-md-5">
+				<div class="col-md-7">
 					<div class="flex-container blog-first-col">
 						<div class="">
 							<h4>we were lead</h4>
@@ -98,7 +85,7 @@
 						</div>
 					</div>	
 				</div>
-				<div class="col-md-7">
+				<div class="col-md-5">
 					<div class="blog-img" style="background:url(images/blog-img1.jpg) no-repeat"></div>
 				</div>
 			</div>
@@ -140,19 +127,15 @@
 			<p>Copyright 2016 Business Name &nbsp; / &nbsp; Website design by <strong>First Flight</strong></p>
 		</div>
 	</footer>
-	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
+	
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="js/masonry.js"></script>
 	<script type="text/javascript">
-		var feed = new Instafeed({
-			get: 'tagged',
-			tagName: 'awesome',
-			clientId: 'ffaa907c57524fc1933d0e350eb3734a'
+		jQuery('.grid').masonry({
+		   itemSelector: '.grid-item--width2',
+		   columnWidth: '.grid-sizer',
+		   percentPosition: true
 		});
-		feed.run();
-</script> -->
-
-
-
-
+	</script>
 </body>
 </html>

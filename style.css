@@ -348,12 +348,12 @@ h4 {
 }
 .page .contact-grid {
   background: #ffffff;
-  background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 50%, #fafafa 50%, #fafafa 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #fafafa), color-stop(100%, #fafafa));
-  background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 50%, #fafafa 50%, #fafafa 100%);
-  background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 50%, #fafafa 50%, #fafafa 100%);
-  background: -o-linear-gradient(left, #ffffff 0%, #ffffff 50%, #fafafa 50%, #fafafa 100%);
-  background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #fafafa 50%, #fafafa 100%);
+  background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(30%, #ffffff), color-stop(30%, #fafafa), color-stop(100%, #fafafa));
+  background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
+  background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
+  background: -o-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#ffffff', end-colourStr='#fafafa', gradientType='1');
 }
 .page .contact-grid .page-content {
@@ -373,6 +373,97 @@ h4 {
 .page .contact-grid .page-content .navbar-form .btn-default, .page .contact-grid .page-content .navbar-form .link-button {
   margin-top: 25px;
   float: right;
+}
+
+.lookbook-page .page-container {
+  padding-bottom: 0;
+}
+.lookbook-page .lookbook-listing {
+  margin-top: -12px;
+}
+.lookbook-page .col-md-6 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+.lookbook-page .col-md-6 .lookbook-grid {
+  position: relative;
+  overflow: hidden;
+}
+.lookbook-page .col-md-6 .lookbook-grid .rollover-container {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.lookbook-page .col-md-6 .lookbook-grid .rollover-container .rollover-content {
+  font-family: ProximaNova;
+  font-style: normal;
+  letter-spacing: 6px;
+}
+.lookbook-page .col-md-6 .lookbook-grid .rollover-container .rollover-content h4 {
+  font-size: 17px;
+  margin: 0 0 40px 0;
+}
+.lookbook-page .col-md-6 .lookbook-grid .rollover-container .rollover-content p {
+  margin-bottom: 40px;
+}
+.lookbook-page .col-md-6 .lookbook-grid .rollover-container .rollover-content .link-button {
+  margin-top: 45px;
+}
+.lookbook-page .col-md-6 .lookbook-grid:hover .rollover-container {
+  top: 0;
+  transition: all 0.5s ease;
+}
+.lookbook-page.page .page-title {
+  padding: 115px 0;
+}
+
+.services-page .page-container {
+  padding-bottom: 50px;
+}
+.services-page .services-listing {
+  background: #fafafa;
+}
+.services-page .col-md-6:first-child {
+  padding-right: 0;
+}
+.services-page .col-md-6:last-child {
+  padding-left: 0;
+}
+.services-page .col-md-6 .services-grid {
+  min-height: 430px;
+  padding: 0 60px;
+  text-align: center;
+}
+.services-page .col-md-6 .services-grid .service-text h4 {
+  margin: 0 0 60px 0;
+}
+.services-page.page .page-title {
+  padding: 130px 0;
+}
+
+.blog-page .grid-sizer, .blog-page .grid-item--width2 {
+  width: 16.667%;
+}
+.blog-page .grid-item--width4 {
+  width: 33.333%;
+  margin-bottom: 25px;
+  padding-right: 25px;
+}
+.blog-page .grid-item--width6 {
+  width: 50%;
+  margin-bottom: 25px;
+  padding-right: 25px;
+}
+.blog-page .grid-item--width8 {
+  width: 66.667%;
+  margin-bottom: 25px;
+  padding-right: 25px;
 }
 
 #footer .follow {
