@@ -105,7 +105,7 @@ h4 {
   border-radius: 0;
 }
 
-.form-control::-moz-placeholder {
+.form-control:-moz-placeholder {
   color: #000000;
 }
 .form-control:focus {
@@ -349,12 +349,13 @@ h4 {
 .page .contact-grid {
   background: #ffffff;
   background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(30%, #ffffff), color-stop(30%, #fafafa), color-stop(100%, #fafafa));
+  /* background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(30%, #ffffff), color-stop(30%, #fafafa), color-stop(100%, #fafafa)); */
   background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
   background: -ms-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
   background: -o-linear-gradient(left, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
   background: linear-gradient(to right, #ffffff 0%, #ffffff 30%, #fafafa 30%, #fafafa 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#ffffff', end-colourStr='#fafafa', gradientType='1');
+  /*filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#ffffff', end-colourStr='#fafafa', gradientType='1');
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#ffffff', end-colourStr='#fafafa', gradientType='1');*/
 }
 .page .contact-grid .page-content {
   padding: 60px 0 0 65px;

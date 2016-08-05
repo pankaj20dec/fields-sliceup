@@ -73,7 +73,7 @@ h4{
 	border-radius: 0;
 }
 .form-control{
-	&::-moz-placeholder{
+	&:-moz-placeholder{
 	color: $primary-color;
 	}
 	&:focus{
